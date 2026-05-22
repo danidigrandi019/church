@@ -1,0 +1,12 @@
+<div class="menu-item has-dropdown" [class.dropdown-active]="isMobileOpen">
+  <a (click)="toggleDropdown($event)" href="javascript:void(0)" class="menu-link">
+    {{ title }} <span class="arrow-icon">∨</span>
+  </a>
+  <ul class="dropdown-menu">
+    @for (item of items; track item.url) {
+      <li>
+        <a [href]="item.url" (click)="onItemClick()">{{ item.label }}</a>
+      </li>
+    }
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+// Transition variables
+$transition-default: all 0.3s ease;
+$transition-fast: all 0.2s ease;
+$transition-slow: transform 0.4s ease;
+$transition-transform-default: transform 0.3s ease;
+
+// Typography variables
+$font-primary: 'Outfit', 'Inter', sans-serif;
+
+// Z-Index Layers
+$z-navbar: 1000;
+$z-dropdown: 1010;
+$z-mobile-menu: 1050;
+
+// Border Radii
+$radius-sm: 6px;
+$radius-md: 8px;
+$radius-pill: 50px;
+
+// Backdrop Filters (Glassmorphism Blur)
+$blur-dropdown: blur(12px);
+$blur-mobile-menu: blur(20px);
+
+// Shadows
+$shadow-dropdown: 0 10px 30px rgba(0, 0, 0, 0.5);
+$shadow-mobile-menu: -10px 0 30px rgba(0, 0, 0, 0.6);
+$shadow-glow-white: 0 4px 18px rgba(255, 255, 255, 0.15);
+
+// Colors & Opacity
+$color-text-muted: rgba(255, 255, 255, 0.75);
+$color-border-light: rgba(255, 255, 255, 0.08);
+$bg-glass-dark: rgba(15, 15, 15, 0.96);
+$bg-glass-mobile: rgba(10, 10, 10, 0.97);
