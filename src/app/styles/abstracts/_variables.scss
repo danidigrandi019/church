@@ -6,8 +6,10 @@ $transition-transform-default: transform 0.3s ease;
 
 // Typography variables
 $font-primary: 'Outfit', 'Inter', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
 
 // Z-Index Layers
+$z-hero: 1;
 $z-navbar: 1000;
 $z-dropdown: 1010;
 $z-mobile-menu: 1050;
@@ -25,8 +27,10 @@ $blur-mobile-menu: blur(20px);
 $shadow-dropdown: 0 10px 30px rgba(0, 0, 0, 0.5);
 $shadow-mobile-menu: -10px 0 30px rgba(0, 0, 0, 0.6);
 $shadow-glow-white: 0 4px 18px rgba(255, 255, 255, 0.15);
+$shadow-cta: 0 4px 20px rgba(243, 167, 6, 0.35);
 
 // Colors & Opacity
+$color-cta-gold: #f3a706;
 $color-text-muted: rgba(255, 255, 255, 0.75);
 $color-border-light: rgba(255, 255, 255, 0.08);
 $bg-glass-dark: rgba(15, 15, 15, 0.96);

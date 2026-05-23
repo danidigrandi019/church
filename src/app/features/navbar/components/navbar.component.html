@@ -5,28 +5,18 @@
     </div>
 
     <ul class="navbar-menu" [class.active]="isMobileMenuOpen">
-      <app-navbar-dropdown
-        title="SOBRE NÓS"
-        [items]="sobreNosItems"
-        (itemClicked)="closeMobileMenu()">
+      <app-navbar-dropdown title="SOBRE NÓS" [items]="sobreNosItems" (itemClicked)="closeMobileMenu()">
       </app-navbar-dropdown>
 
-      <app-navbar-dropdown
-        title="AMBIENTES"
-        [items]="ambientesItems"
-        (itemClicked)="closeMobileMenu()">
+      <app-navbar-dropdown title="AMBIENTES" [items]="ambientesItems" (itemClicked)="closeMobileMenu()">
       </app-navbar-dropdown>
 
       <li class="menu-item">
-        <a href="#mensagens" class="menu-link" (click)="closeMobileMenu()">MENSAGENS</a>
+        <a href="#eventos" class="menu-link" (click)="closeMobileMenu()">EVENTOS</a>
       </li>
 
       <li class="menu-item">
         <a href="#pequeno-grupo" class="menu-link" (click)="closeMobileMenu()">PEQUENO GRUPO</a>
-      </li>
-
-      <li class="menu-item">
-        <a href="#red-college" class="menu-link" (click)="closeMobileMenu()">RED COLLEGE</a>
       </li>
 
       <li class="menu-item mobile-cta-item">
@@ -37,7 +27,8 @@
     <div class="navbar-right">
       <button class="contribua-btn desktop-cta">CONTRIBUA</button>
 
-      <button class="hamburger-menu" (click)="toggleMobileMenu()" [class.open]="isMobileMenuOpen" aria-label="Toggle navigation menu">
+      <button class="hamburger-menu" (click)="toggleMobileMenu()" [class.open]="isMobileMenuOpen"
+        aria-label="Toggle navigation menu">
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
         <span class="hamburger-bar"></span>
