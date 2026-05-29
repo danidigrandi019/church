@@ -14,7 +14,9 @@ A seção hero SHALL ocupar 100% da altura da viewport (`min-height: 100vh`) e t
 - **WHEN** a página é carregada
 - **THEN** a navbar SHALL aparecer flutuando sobre a hero section com `position: absolute`, sem empurrar o conteúdo para baixo
 
----
+#### Scenario: Responsividade do vídeo em dispositivos mobile
+- **WHEN** o usuário acessa em dispositivo móvel com largura ≤ 768px em modo retrato (portrait)
+- **THEN** o vídeo de background SHALL ser escalado uniformemente para ocultar quaisquer bordas pretas (letterboxing) nativas nas extremidades superior e inferior
 
 ### Requirement: Título principal "VIVA O NOVO"
 A hero section SHALL exibir o texto **"VIVA O NOVO"** como título principal (`<h1>`), em fonte `Outfit` bold, tamanho grande, cor branca, posicionado no lado esquerdo da seção.

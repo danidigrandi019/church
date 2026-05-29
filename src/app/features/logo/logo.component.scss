@@ -15,8 +15,4 @@
   transition: vars.$transition-transform-default;
   display: block;
   cursor: pointer;
-
-  &:hover {
-    transform: scale(1.05);
-  }
 }
