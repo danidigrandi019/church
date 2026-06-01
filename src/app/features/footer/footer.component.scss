@@ -1,0 +1,228 @@
+@use 'abstracts/variables' as vars;
+
+.footer {
+  background-color: #0b0b0b;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4.5rem 2rem 2rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: vars.$font-primary;
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      position: relative;
+      padding-bottom: 0.5rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 2px;
+        background-color: #ffffff;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  // Column 1: Logo & Socials
+  .brand-column {
+    .logo-wrapper {
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer-logo {
+        height: 70px;
+        width: auto;
+        object-fit: contain;
+        transition: vars.$transition-default;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #1a1a1a;
+        color: #ffffff;
+        transition: vars.$transition-default;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        &:hover {
+          background-color: #ffffff;
+          color: #0b0b0b;
+          transform: translateY(-3px);
+          box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+        }
+      }
+    }
+  }
+
+  // Column 2: Location
+  .location-column {
+    .address-link {
+      color: inherit;
+      text-decoration: none;
+      transition: vars.$transition-default;
+      display: block;
+
+      p {
+        margin: 0.4rem 0;
+        font-family: vars.$font-secondary;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+
+      &:hover {
+        color: #ffffff;
+        
+        p {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // Column 3: Schedules and contact info
+  .info-column {
+    .schedules-simple {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .schedule-text {
+        margin: 0;
+        font-family: vars.$font-secondary;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+
+      .contact-link {
+        display: inline-block;
+        color: inherit;
+        text-decoration: none;
+        font-family: vars.$font-secondary;
+        font-size: 0.85rem;
+        transition: vars.$transition-default;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+          color: #ffffff;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Footer Bottom (Copyright)
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 3.5rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: 0.8rem;
+      opacity: 0.5;
+      font-family: vars.$font-secondary;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 1024px) {
+  .footer {
+    padding: 4rem 2rem 2rem;
+
+    .footer-container {
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 2rem;
+
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-column {
+      h3 {
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+      }
+      
+      p, a, span {
+        font-size: 0.85rem;
+      }
+    }
+
+    .footer-bottom {
+      margin-top: 2rem;
+      padding-top: 1.25rem;
+      
+      p {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

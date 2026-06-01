@@ -3,9 +3,9 @@
     {{ title }} <span class="arrow-icon">∨</span>
   </a>
   <ul class="dropdown-menu">
-    @for (item of items; track item.url) {
+    @for (item of items; track item.label) {
       <li>
-        <a [href]="item.url" (click)="onItemClick()">{{ item.label }}</a>
+        <a [routerLink]="[item.routerLink]" [fragment]="item.fragment" (click)="onItemClick()">{{ item.label }}</a>
       </li>
     }
   </ul>

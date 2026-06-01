@@ -9,6 +9,12 @@
   background: transparent;
   transition: vars.$transition-default;
   font-family: vars.$font-primary;
+
+  &.navbar-dark {
+    background-color: #0b0b0b;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+  }
 }
 
 .navbar-container {

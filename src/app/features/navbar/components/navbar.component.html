@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" [class.navbar-dark]="isDarkTheme">
   <div class="navbar-container">
     <div class="navbar-left">
       <app-logo></app-logo>
@@ -12,11 +12,11 @@
       </app-navbar-dropdown>
 
       <li class="menu-item">
-        <a href="#eventos" class="menu-link" (click)="closeMobileMenu()">EVENTOS</a>
+        <a routerLink="/" fragment="eventos" class="menu-link" (click)="closeMobileMenu()">EVENTOS</a>
       </li>
 
       <li class="menu-item">
-        <a href="#pequeno-grupo" class="menu-link" (click)="closeMobileMenu()">PEQUENO GRUPO</a>
+        <a routerLink="/" fragment="pequeno-grupo" class="menu-link" (click)="closeMobileMenu()">PEQUENO GRUPO</a>
       </li>
 
       <li class="menu-item mobile-cta-item">
