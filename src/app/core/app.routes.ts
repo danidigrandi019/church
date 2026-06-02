@@ -10,6 +10,14 @@ export const routes: Routes = [
     loadComponent: () => import('../features/pages/history/components/history.component').then(m => m.HistoryComponent)
   },
   {
+    path: 'team',
+    loadComponent: () => import('../features/pages/team/team.component').then(m => m.TeamComponent)
+  },
+  {
+    path: 'young-generation',
+    loadComponent: () => import('../features/pages/young_generation/young_generation.component').then(m => m.YoungGenerationComponent)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

@@ -17,24 +17,25 @@ export class NavbarComponent implements OnInit, OnDestroy {
   isDarkTheme = false;
   private routerSub?: Subscription;
 
+  private darkThemeRoutes = ['/history', '/team', '/young-generation'];
+
   sobreNosItems = [
     { label: 'Nossa História', routerLink: '/history' },
-    { label: 'Equipe', routerLink: '/', fragment: 'about' }
+    { label: 'Equipe', routerLink: '/team' }
   ];
 
   ambientesItems = [
-    { label: 'RED Kids', routerLink: '/', fragment: 'kids' },
-    { label: 'RED Youth', routerLink: '/', fragment: 'youth' },
-    { label: 'Celebrações', routerLink: '/', fragment: 'adults' }
+    { label: 'Kids', routerLink: '/' },
+    { label: 'Geração Jovem', routerLink: '/young-generation' }
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.routerSub = this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      this.isDarkTheme = event.urlAfterRedirects.includes('/history');
+      this.isDarkTheme = this.darkThemeRoutes.some(route => event.urlAfterRedirects.includes(route));
     });
   }
 
