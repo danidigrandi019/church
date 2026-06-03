@@ -5,4 +5,17 @@ body {
     background-color: #000000;
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main> :not(app-navbar):not(app-footer) {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
 }

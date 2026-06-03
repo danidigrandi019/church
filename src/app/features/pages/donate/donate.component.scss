@@ -1,0 +1,151 @@
+@use 'abstracts/variables' as vars;
+
+$color-text-dark: #1a1a1a;
+$color-text-medium: #555555;
+
+.donate-page {
+  background-color: #ffffff;
+  color: $color-text-dark;
+  font-family: vars.$font-primary;
+  flex: 1;
+  padding: 64px 24px 80px;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    padding: 36px 16px 56px;
+  }
+}
+
+.donate-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.donate-header {
+  text-align: center;
+  margin-bottom: 56px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 36px;
+  }
+}
+
+.donate-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $color-text-dark;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.donate-subtitle {
+  font-family: vars.$font-secondary;
+  font-size: 0.95rem;
+  color: $color-text-medium;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.donate-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 40px;
+  row-gap: 56px;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 16px;
+  }
+}
+
+.donate-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.method-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: vars.$color-cta-gold;
+  line-height: 1.45;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+  max-width: 280px;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+}
+
+.method-description {
+  font-family: vars.$font-secondary;
+  font-size: 0.82rem;
+  color: $color-text-medium;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 280px;
+
+  &.bank-details,
+  &.pix-details {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .detail-line {
+    margin: 0;
+  }
+
+  .detail-label {
+    font-weight: 600;
+    color: $color-text-dark;
+  }
+
+  .pix-key {
+    font-weight: 700;
+    color: vars.$color-cta-gold;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    user-select: all;
+    letter-spacing: 0.02em;
+  }
+
+  .detail-note {
+    font-size: 0.75rem;
+    color: #999999;
+    margin-top: 4px;
+  }
+}
