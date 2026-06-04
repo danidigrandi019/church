@@ -1,1 +1,125 @@
 <app-hero></app-hero>
+
+<div class="schedule-section">
+  <div class="schedule-container">
+    <h2 class="section-title">Programação Semanal</h2>
+
+    <div class="schedule-grid">
+      <!-- Card 1: Sunday Morning -->
+      <div class="schedule-card">
+        <div class="schedule-card__top-bar"></div>
+        <div class="schedule-card__content">
+          <div class="schedule-card__header">
+            <span class="schedule-card__day">Domingo</span>
+            <span class="schedule-card__time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              09h
+            </span>
+          </div>
+          <div class="schedule-card__divider"></div>
+          <h3 class="schedule-card__title">Escola Bíblica Dominical</h3>
+          <p class="schedule-card__description">Um tempo precioso de estudo bíblico, comunhão e crescimento doutrinário
+            para todas as idades.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Sunday Evening -->
+      <div class="schedule-card">
+        <div class="schedule-card__top-bar"></div>
+        <div class="schedule-card__content">
+          <div class="schedule-card__header">
+            <span class="schedule-card__day">Domingo</span>
+            <span class="schedule-card__time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              18h
+            </span>
+          </div>
+          <div class="schedule-card__divider"></div>
+          <h3 class="schedule-card__title">Culto de Celebração</h3>
+          <p class="schedule-card__description">Nossa reunião principal de adoração, Palavra e oração em comunidade.
+            Venha celebrar conosco!</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Wednesday -->
+      <div class="schedule-card">
+        <div class="schedule-card__top-bar"></div>
+        <div class="schedule-card__content">
+          <div class="schedule-card__header">
+            <span class="schedule-card__day">Quarta-feira</span>
+            <span class="schedule-card__time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              20h
+            </span>
+          </div>
+          <div class="schedule-card__divider"></div>
+          <h3 class="schedule-card__title">Culto de Oração</h3>
+          <p class="schedule-card__description">Momento focado em intercessão, estudo bíblico e fortalecimento da nossa
+            fé no meio da semana.</p>
+        </div>
+      </div>
+
+      <!-- Card 4: Saturday -->
+      <div class="schedule-card">
+        <div class="schedule-card__top-bar"></div>
+        <div class="schedule-card__content">
+          <div class="schedule-card__header">
+            <span class="schedule-card__day">Sábado</span>
+            <span class="schedule-card__time">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              19h
+            </span>
+          </div>
+          <div class="schedule-card__divider"></div>
+          <h3 class="schedule-card__title">Geração Jovem</h3>
+          <p class="schedule-card__description">O culto da nossa juventude. Um ambiente dinâmico com adoração, palavra
+            relevante e muita comunhão.</p>
+          <a routerLink="/young-generation" class="schedule-card__link">
+            Saiba mais
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <aside class="bible-plan" aria-label="Download do plano de leitura bíblica">
+      <h3 class="bible-plan__title">Plano de Leitura Bíblica</h3>
+      <div class="bible-plan__row">
+        <p class="bible-plan__text">Arquivo em PDF para acompanhar a leitura da Bíblia ao longo do ano.</p>
+        <a
+          href="/assets/documents/anual-plan.pdf"
+          download="plano-leitura-biblica-anual.pdf"
+          class="bible-plan__download"
+        >
+          Baixar PDF
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+        </a>
+      </div>
+    </aside>
+  </div>
+</div>

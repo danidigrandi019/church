@@ -105,23 +105,12 @@
   .hamburger-bar {
     @include vars.divider(100%, 2px, #ffffff, 2px, 1);
     transition: vars.$transition-default;
-    transform-origin: left center;
   }
+}
 
-  &.open {
-    .hamburger-bar:nth-child(1) {
-      transform: rotate(45deg) translateY(-2px) translateX(2px);
-    }
-
-    .hamburger-bar:nth-child(2) {
-      opacity: 0;
-      width: 0;
-    }
-
-    .hamburger-bar:nth-child(3) {
-      transform: rotate(-45deg) translateY(2px) translateX(2px);
-    }
-  }
+.mobile-menu-backdrop,
+.mobile-menu-close-item {
+  display: none;
 }
 
 @media (max-width: 1023px) {
@@ -131,6 +120,51 @@
 
   .hamburger-menu {
     display: flex;
+
+    &.open {
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+
+  .mobile-menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.55);
+    cursor: pointer;
+    z-index: calc(#{vars.$z-mobile-menu} - 1);
+  }
+
+  .mobile-menu-close-item {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: auto;
+    list-style: none;
+    z-index: 1;
+  }
+
+  .mobile-menu-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: vars.$transition-fast;
+
+    &:hover {
+      color: vars.$color-cta-gold;
+    }
   }
 
   .navbar-menu {
@@ -144,7 +178,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 6.5rem 2rem 2rem;
+    padding: 5rem 2rem 2rem;
     gap: 1.25rem;
     transform: translateX(100%);
     transition: vars.$transition-slow;
