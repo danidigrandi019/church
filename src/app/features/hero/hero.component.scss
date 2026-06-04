@@ -67,6 +67,7 @@
 }
 
 .hero-cta-btn {
+  display: inline-block;
   background-color: vars.$color-cta-gold;
   color: #0b0b0b;
   border: none;
@@ -77,6 +78,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
 }
 
