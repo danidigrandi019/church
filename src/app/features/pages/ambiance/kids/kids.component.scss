@@ -1,11 +1,13 @@
 @use 'abstracts/variables' as vars;
 
-.young-generation-page {
+.kids-page {
   @include vars.standard-page-layout;
 
   .main-image {
     display: block;
     width: 100%;
+    aspect-ratio: 1672 / 941;
+    object-fit: cover;
     height: auto;
     transition: transform 0.3s ease;
   }

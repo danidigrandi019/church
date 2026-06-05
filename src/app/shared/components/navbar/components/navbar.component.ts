@@ -16,7 +16,7 @@ export class NavbarComponent {
   isMobileMenuOpen = false;
   isDarkTheme = false;
 
-  private darkThemeRoutes = ['/history', '/team', '/young-generation', '/events', '/donate'];
+  private darkThemeRoutes = ['/history', '/team', '/young-generation', '/kids', '/events', '/donate'];
 
   sobreNosItems = [
     { label: 'Nossa História', routerLink: '/history' },
@@ -24,7 +24,7 @@ export class NavbarComponent {
   ];
 
   ambientesItems = [
-    { label: 'Kids', routerLink: '/' },
+    { label: 'Kids', routerLink: '/kids' },
     { label: 'Geração Jovem', routerLink: '/young-generation' }
   ];
 

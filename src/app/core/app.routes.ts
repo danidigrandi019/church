@@ -18,6 +18,10 @@ export const routes: Routes = [
     loadComponent: () => import('../features/pages/ambiance/young_generation/young_generation.component').then(m => m.YoungGenerationComponent)
   },
   {
+    path: 'kids',
+    loadComponent: () => import('../features/pages/ambiance/kids/kids.component').then(m => m.KidsComponent)
+  },
+  {
     path: 'events',
     loadComponent: () => import('../features/pages/events/events.component').then(m => m.EventsComponent)
   },
