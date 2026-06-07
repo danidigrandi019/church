@@ -13,12 +13,6 @@ export interface ChurchEvent {
 export class EventsService {
   private eventsState = signal<ChurchEvent[]>([
     {
-      date: 'Sáb, 06 Jun',
-      time: '22:00',
-      title: 'Vigília',
-      description: 'Você é nosso convidado(a)! Uma noite de oração e encontro com Deus. Venha!'
-    },
-    {
       date: 'Sex, 20 Jun',
       time: '19:00',
       title: 'Jantar dos Casais',
