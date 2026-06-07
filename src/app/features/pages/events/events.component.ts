@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, formatDate } from '@angular/common';
 import { EventsService, ChurchEvent } from '../../../core/services/events.service';
 
 @Component({
@@ -14,5 +14,9 @@ export class EventsComponent {
 
   get events(): ChurchEvent[] {
     return this.eventsService.events();
+  }
+
+  fmt(dt: string, f: string): string {
+    return formatDate(dt, f, 'pt').replace(/\./g, '');
   }
 }
