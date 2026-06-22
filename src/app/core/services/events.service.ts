@@ -13,11 +13,6 @@ export class EventsService {
 
   private allEvents = signal<ChurchEvent[]>([
     {
-      dateTime: '2026-06-20T19:00',
-      title: 'Jantar dos Casais',
-      description: 'Um jantar e uma noite pra ficar na memória. Valor: R$80,00. Reserve com o Ministério de Casais.'
-    },
-    {
       dateTime: '2026-06-26T20:00',
       title: 'Culto de Mulheres',
       description: '"Esperança que não morre no frio" — Você é nossa convidada! Preletora: Presbítera Flávia P. Silva. Ao final teremos caldinhos.'
