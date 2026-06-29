@@ -11,13 +11,7 @@ export class EventsService {
   private destroyRef = inject(DestroyRef);
   private now = signal(Date.now());
 
-  private allEvents = signal<ChurchEvent[]>([
-    {
-      dateTime: '2026-06-26T20:00',
-      title: 'Culto de Mulheres',
-      description: '"Esperança que não morre no frio" — Você é nossa convidada! Preletora: Presbítera Flávia P. Silva. Ao final teremos caldinhos.'
-    }
-  ]);
+  private allEvents = signal<ChurchEvent[]>([]);
 
   readonly events = computed(() => {
     const now = this.now();
