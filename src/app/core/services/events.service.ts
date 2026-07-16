@@ -16,7 +16,7 @@ export class EventsService {
       dateTime: '2026-07-25T16:00:00',
       title: 'Conferência Identidade',
       description:
-        'Evento da Geração Jovem. Entrada: 1Kg de alimento não perecível. Inscrições pelo grupo do WhatsApp.',
+        'Evento da Geração Jovem. Entrada: 1Kg de alimento não perecível. Formulário de inscrição disponível no grupo do WhatsApp.',
     },
   ]);
 
