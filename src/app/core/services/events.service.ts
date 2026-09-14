@@ -13,10 +13,10 @@ export class EventsService {
 
   private allEvents = signal<ChurchEvent[]>([
     {
-      dateTime: '2026-07-25T16:00:00',
-      title: 'Conferência Identidade',
+      dateTime: '2026-11-14T08:00:00',
+      title: 'Encerramento dos Homens',
       description:
-        'Evento da Geração Jovem. Entrada: 1Kg de alimento não perecível. Formulário de inscrição disponível no grupo do WhatsApp.',
+        'Um dia inteiro de comunhão, palavra e fogo de chão. A partir das 8h da manhã em uma chácara. O dia inteiro!',
     },
   ]);
 
